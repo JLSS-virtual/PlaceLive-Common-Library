@@ -40,7 +40,11 @@ public enum ErrorCode {
     /**
      * Error indicating that a resource already exists.
      */
-    RES0001("RES0001", "Resource already exists", 409);
+    RES0001("RES0001", "Resource already exists", 409),
+    /**
+     * Success Message OK
+     */
+    OK200("OK200", "Successful", 200);
 
     /**
      * The unique code representing the error.

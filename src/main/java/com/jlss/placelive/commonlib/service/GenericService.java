@@ -6,7 +6,7 @@ import org.springframework.data.domain.Page;
 import java.util.List;
 
 public interface GenericService<T> {
-   void deleteObject(Integer id);
+   String deleteObject(Integer id);
 
    T createObject(T object);
    T objectsIdPut(Integer id, T object);

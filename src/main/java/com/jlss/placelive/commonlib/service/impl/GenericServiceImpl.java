@@ -36,17 +36,16 @@ public class GenericServiceImpl<T, R extends JpaRepository<T, Long> & JpaSpecifi
         this.repository = repository;
     }
 
-    public void deleteObject(Integer id) {
+    public String deleteObject(Integer id) {
         if (id == null || id <= 0) {
             throw new BadRequestException(ErrorCode.BAD0001.getCode(), ErrorCode.BAD0001.getMessage());
         }
-        this.repository.deleteById(id.longValue());
         try {
             this.repository.deleteById(id.longValue());
+            return ErrorCode.OK200.getCode();
         } catch (EmptyResultDataAccessException ex) {
             throw new NotFoundException(ErrorCode.ERR404.getCode(),ErrorCode.ERR404.getMessage());
         }
-        logger.info("test");
     }
 
 
