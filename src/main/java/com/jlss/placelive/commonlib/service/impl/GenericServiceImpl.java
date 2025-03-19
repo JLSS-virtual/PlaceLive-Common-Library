@@ -2,7 +2,7 @@ package com.jlss.placelive.commonlib.service.impl;
 
 
 import com.jlss.placelive.commonlib.specification.impl.GenericSpecification;
-import com.simplyminds.common.specification.impl.SearchCriteria;
+import com.jlss.placelive.commonlib.specification.impl.SearchCriteria;
 import com.jlss.placelive.commonlib.enums.ErrorCode;
 import com.jlss.placelive.commonlib.exceptions.BadRequestException;
 import com.jlss.placelive.commonlib.exceptions.NotFoundException;
@@ -40,6 +40,7 @@ public class GenericServiceImpl<T, R extends JpaRepository<T, Long> & JpaSpecifi
         if (id == null || id <= 0) {
             throw new BadRequestException(ErrorCode.BAD0001.getCode(), ErrorCode.BAD0001.getMessage());
         }
+        this.repository.deleteById(id.longValue());
         try {
             this.repository.deleteById(id.longValue());
         } catch (EmptyResultDataAccessException ex) {

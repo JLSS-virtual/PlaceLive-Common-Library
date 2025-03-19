@@ -1,4 +1,4 @@
-package com.simplyminds.common.specification.impl;
+package com.jlss.placelive.commonlib.specification.impl;
 
 import lombok.Getter;
 import lombok.Setter;

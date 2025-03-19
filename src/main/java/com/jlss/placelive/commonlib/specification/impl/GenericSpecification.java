@@ -1,8 +1,6 @@
 package com.jlss.placelive.commonlib.specification.impl;
 
-
-
-import com.simplyminds.common.specification.impl.SearchCriteria;
+import com.jlss.placelive.commonlib.specification.impl.SearchCriteria;
 import jakarta.persistence.criteria.*;
 import org.springframework.data.jpa.domain.Specification;
 
@@ -16,7 +14,7 @@ public class GenericSpecification<T> implements Specification<T> {
     // we will set it here so that no need to send explicitly the source entity .
     private Class<?> targetEntity;
 
-    public GenericSpecification(com.simplyminds.common.specification.impl.SearchCriteria searchCriteria) {
+    public GenericSpecification(SearchCriteria searchCriteria) {
         this.searchCriteria = searchCriteria;
     }
 
