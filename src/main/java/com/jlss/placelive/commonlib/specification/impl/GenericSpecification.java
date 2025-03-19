@@ -1,7 +1,7 @@
 package com.jlss.placelive.commonlib.specification.impl;
 
 
-import com.jlss.placelive.commonlib.dto.SpecificationResponseDto;
+
 import com.simplyminds.common.specification.impl.SearchCriteria;
 import jakarta.persistence.criteria.*;
 import org.springframework.data.jpa.domain.Specification;
