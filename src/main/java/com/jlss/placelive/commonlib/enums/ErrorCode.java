@@ -5,14 +5,12 @@ import lombok.Getter;
 /**
  * Enum representing various error codes, messages, and HTTP statuses
  * used for error handling across the application.
- * <p>
  * This enum is structured in categories such as:
  * <ul>
  *     <li>Generic Errors (GEN)</li>
  *     <li>Bad Request Errors (BAD)</li>
  *     <li>Resource Already Exists Errors (RES)</li>
  * </ul>
- * </p>
  * Each error code contains a unique identifier (code), an error message,
  * and an associated HTTP status.
  */
